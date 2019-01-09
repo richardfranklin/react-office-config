@@ -1,0 +1,23 @@
+{
+  "name": "react-office-configurator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others \"cd temp-json-server && json-server -p 4000 db.json\" \"cd office-configurator && yarn start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardfranklin/react-office-config.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardfranklin/react-office-config/issues"
+  },
+  "homepage": "https://github.com/richardfranklin/react-office-config#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
