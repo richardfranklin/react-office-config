@@ -19,7 +19,7 @@ class CategoriesContainer extends Component {
 		if (this.getCategories() !== null) {
 			return this.getCategories().map(categoryItem => {
 				return (
-					<div>
+					<div key={categoryItem.name}>
 						<div>
 							<SelectedProduct productData={categoryItem.product} />
 						</div>
