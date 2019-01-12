@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import desksReducer from './desksReducer';
+import categoriesReducer from './categoriesReducer';
 
 const rootReducer = combineReducers({
-	desks: desksReducer
+	categories: categoriesReducer
 });
 
 export default rootReducer;

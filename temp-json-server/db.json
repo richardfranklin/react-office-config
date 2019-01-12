@@ -1,44 +1,59 @@
-
 {
-  "desks": [ {
-  "id" : "officedepotProductCatalog/Online/3568401",
-  "productTitle" : "Sun' Straight office desk 1600mm beech effect",
-  "imageUrl" : "/image/odeu13/3568401",
-  "widthText" : "1600 mm",
-  "depthText" : "800 mm",
-  "heightText" : "720 mm",
-  "fullProductImageUrl" : "http://static.viking-direct.co.uk/is/image/odeu13/3568401wid=250&hei=250"
-}, {
-  "id" : "officedepotProductCatalog/Online/6597030",
-  "productTitle" : "Dams International Desk Screen ES1000S-B Blue ",
-  "imageUrl" : "/image/odeu13/6597030",
-  "widthText" : "1000 mm",
-  "depthText" : null,
-  "heightText" : "400 mm",
-  "fullProductImageUrl" : "http://static.viking-direct.co.uk/is/image/odeu13/6597030wid=250&hei=250"
-}, {
-  "id" : "officedepotProductCatalog/Online/8406374",
-  "productTitle" : "NewStar Desk Mount With Clamp height adjustable 27 inch Silver",
-  "imageUrl" : "/image/odeu13/8406374",
-  "widthText" : null,
-  "depthText" : null,
-  "heightText" : null,
-  "fullProductImageUrl" : "http://static.viking-direct.co.uk/is/image/odeu13/8406374wid=250&hei=250"
-}, {
-  "id" : "officedepotProductCatalog/Online/3781958",
-  "productTitle" : "Alba Desk Lamp Fluofit Black",
-  "imageUrl" : "/image/odeu13/3781958",
-  "widthText" : null,
-  "depthText" : null,
-  "heightText" : "890 mm",
-  "fullProductImageUrl" : "http://static.viking-direct.co.uk/is/image/odeu13/3781958wid=250&hei=250"
-}, {
-  "id" : "officedepotProductCatalog/Online/7331278",
-  "productTitle" : "Alba Desk Lamp Ledluce Green, Silver",
-  "imageUrl" : "/image/odeu13/7331278",
-  "widthText" : null,
-  "depthText" : null,
-  "heightText" : "450 mm",
-  "fullProductImageUrl" : "http://static.viking-direct.co.uk/is/image/odeu13/7331278wid=250&hei=250"
-} ]
+  "homeoffice": {
+    "name": "Home Office",
+    "description": "Lorem ipsum",
+    "numberOfEmployees": 2,
+    "categories": [
+      {
+        "name": "chairs",
+        "quantity": 2,
+        "product": {
+          "id": "3568401",
+          "productTitle": "Niceday Office Chair Ness basic tilt Black",
+          "imageUrl": "/image/odeu13/3568401",
+          "colour": "black",
+          "widthText": "800 mm",
+          "depthText": "800 mm",
+          "heightText": "1400 mm",
+          "fullProductImageUrl": "http://static.viking-direct.co.uk/is/image/odeu13/3568401",
+          "price": 40.00
+        },
+        "alternatives": [{
+            "productTitle": "Niceday Office Chair Ness basic tilt Red"
+          },
+          {
+            "productTitle": "Niceday Office Chair Super Comfortable tilt Black"
+          },
+          {
+            "productTitle": "Niceday Office Chair Super Comfortable tilt Red"
+          }
+        ]
+      },
+      {
+        "name": "desks",
+        "quantity": 2,
+        "product": {
+          "id": "8475793",
+          "productTitle": "Test Office Desk",
+          "imageUrl": "/image/odeu13/3568401",
+          "colour": "black",
+          "widthText": "800 mm",
+          "depthText": "800 mm",
+          "heightText": "1400 mm",
+          "fullProductImageUrl": "http://static.viking-direct.co.uk/is/image/odeu13/3568401",
+          "price": 40.00
+        },
+        "alternatives": [{
+            "productTitle": "Test Desk 1"
+          },
+          {
+            "productTitle": "Test Desk 2"
+          },
+          {
+            "productTitle": "Test Desk 3"
+          }
+        ]
+      }
+    ]
+  }
 }
