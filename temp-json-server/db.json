@@ -1,59 +1,84 @@
 {
-  "homeoffice": {
-    "name": "Home Office",
-    "description": "Lorem ipsum",
-    "numberOfEmployees": 2,
-    "categories": [
-      {
-        "name": "chairs",
-        "quantity": 2,
-        "product": {
-          "id": "3568401",
-          "productTitle": "Niceday Office Chair Ness basic tilt Black",
-          "imageUrl": "/image/odeu13/3568401",
-          "colour": "black",
-          "widthText": "800 mm",
-          "depthText": "800 mm",
-          "heightText": "1400 mm",
-          "fullProductImageUrl": "http://static.viking-direct.co.uk/is/image/odeu13/3568401",
-          "price": 40.00
-        },
-        "alternatives": [{
-            "productTitle": "Niceday Office Chair Ness basic tilt Red"
-          },
-          {
-            "productTitle": "Niceday Office Chair Super Comfortable tilt Black"
-          },
-          {
-            "productTitle": "Niceday Office Chair Super Comfortable tilt Red"
-          }
-        ]
-      },
-      {
-        "name": "desks",
-        "quantity": 2,
-        "product": {
-          "id": "8475793",
-          "productTitle": "Test Office Desk",
-          "imageUrl": "/image/odeu13/3568401",
-          "colour": "black",
-          "widthText": "800 mm",
-          "depthText": "800 mm",
-          "heightText": "1400 mm",
-          "fullProductImageUrl": "http://static.viking-direct.co.uk/is/image/odeu13/3568401",
-          "price": 40.00
-        },
-        "alternatives": [{
-            "productTitle": "Test Desk 1"
-          },
-          {
-            "productTitle": "Test Desk 2"
-          },
-          {
-            "productTitle": "Test Desk 3"
-          }
-        ]
-      }
-    ]
-  }
+	"homeoffice": {
+		"name": "Home Office",
+		"description": "Lorem ipsum",
+		"numberOfEmployees": 2,
+		"categories": [
+			{
+				"name": "chairs",
+				"quantity": 2,
+				"product": {
+					"id": "142434",
+					"productTitle": "Black Chair",
+					"imageUrl": "/image/odeu13/3568401",
+					"colour": "black",
+					"widthText": "800 mm",
+					"depthText": "800 mm",
+					"heightText": "1400 mm",
+					"fullProductImageUrl": "http://static.viking-direct.co.uk/is/image/odeu13/3568401",
+					"price": 40.00
+				},
+				"alternatives": [
+					{
+						"id": "6547475",
+						"productTitle": "Red Chair",
+						"imageUrl": "/image/odeu13/3568401",
+						"colour": "black",
+						"widthText": "800 mm",
+						"depthText": "800 mm",
+						"heightText": "1400 mm",
+						"fullProductImageUrl": "http://static.viking-direct.co.uk/is/image/odeu13/3568401",
+						"price": 25.00
+					},
+					{
+						"id": "3532431",
+						"productTitle": "Blue Chair",
+						"imageUrl": "/image/odeu13/3568401",
+						"colour": "black",
+						"widthText": "800 mm",
+						"depthText": "800 mm",
+						"heightText": "1400 mm",
+						"fullProductImageUrl": "http://static.viking-direct.co.uk/is/image/odeu13/3568401",
+						"price": 33.00
+					},
+					{
+						"id": "352562",
+						"productTitle": "Green Chair",
+						"imageUrl": "/image/odeu13/3568401",
+						"colour": "black",
+						"widthText": "800 mm",
+						"depthText": "800 mm",
+						"heightText": "1400 mm",
+						"fullProductImageUrl": "http://static.viking-direct.co.uk/is/image/odeu13/3568401",
+						"price": 45.00
+					}
+				]
+			},
+			{
+				"name": "desks",
+				"quantity": 2,
+				"product": {
+					"id": "8475793",
+					"productTitle": "Test Office Desk",
+					"imageUrl": "/image/odeu13/3568401",
+					"colour": "black",
+					"widthText": "800 mm",
+					"depthText": "800 mm",
+					"heightText": "1400 mm",
+					"fullProductImageUrl": "http://static.viking-direct.co.uk/is/image/odeu13/3568401",
+					"price": 40.00
+				},
+				"alternatives": [{
+						"productTitle": "Test Desk 1"
+					},
+					{
+						"productTitle": "Test Desk 2"
+					},
+					{
+						"productTitle": "Test Desk 3"
+					}
+				]
+			}
+		]
+	}
 }
