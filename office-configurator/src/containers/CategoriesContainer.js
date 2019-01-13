@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SelectedProduct from './selectedProduct';
 import AlternativeProducts from './alternativeProducts';
-import fetchCategories from '../actions/fetchCategories';
+import fetchPage from '../actions/fetchPage';
 
 class CategoriesContainer extends Component {
 	
 	componentWillMount() {
-        this.props.fetchCategories();
+        this.props.fetchPage();
 	}
 	
 	getCategories() {
@@ -53,4 +53,4 @@ function mapStateToProps({ categories }) {
     return { categories: categories };
 }
 
-export default connect(mapStateToProps, { fetchCategories })(CategoriesContainer);
+export default connect(mapStateToProps, { fetchPage })(CategoriesContainer);

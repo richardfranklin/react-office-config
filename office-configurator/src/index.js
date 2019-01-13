@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import promise from 'redux-promise';
-import CategoriesContainer from './containers/categories';
+import CategoriesContainer from './containers/CategoriesContainer';
+import IntroContainer from './containers/IntroContainer';
 
 import reducers from './reducers';
 
@@ -14,6 +15,7 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
 	<Provider store={createStoreWithMiddleware(reducers)}>
+		<IntroContainer />
 		<CategoriesContainer />
 	</Provider>
 	, document.getElementById('root'));
