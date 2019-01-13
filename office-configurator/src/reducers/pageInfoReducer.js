@@ -1,7 +1,7 @@
 import { FETCH_PAGE } from '../actions/fetchPage';
 
 export function nameReducer (state = {}, action) {        
-    if (action.type === FETCH_PAGE) {
+    if (action.type === FETCH_PAGE && action.payload.hasOwnProperty('data')) {
         return action.payload.data.name;
     }
     else {
@@ -10,7 +10,7 @@ export function nameReducer (state = {}, action) {
 }
 
 export function descriptionReducer (state = {}, action) {        
-    if (action.type === FETCH_PAGE) {
+    if (action.type === FETCH_PAGE && action.payload.hasOwnProperty('data')) {
         return action.payload.data.description;
     }
     else {
@@ -19,7 +19,7 @@ export function descriptionReducer (state = {}, action) {
 }
 
 export function numberOfEmployeesReducer (state = {}, action) {        
-    if (action.type === FETCH_PAGE) {
+    if (action.type === FETCH_PAGE && action.payload.hasOwnProperty('data')) {
         return action.payload.data.numberOfEmployees;
     }
     else {

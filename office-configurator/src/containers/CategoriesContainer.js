@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import SelectedProduct from './selectedProduct';
-import AlternativeProducts from './alternativeProducts';
+import SelectedProduct from './SelectedProduct';
+import AlternativeProducts from './AlternativeProducts';
 import fetchPage from '../actions/fetchPage';
 
 class CategoriesContainer extends Component {
@@ -17,7 +17,7 @@ class CategoriesContainer extends Component {
 
 	getCategoryItems() {
 		if (this.getCategories() !== null) {
-			return this.getCategories().map(categoryItem => {
+			return this.getCategories().map((categoryItem, categoryIndex) => {
 				return (
 					<div key={categoryItem.name}>
 						<div>
@@ -25,7 +25,7 @@ class CategoriesContainer extends Component {
 						</div>
 						<br /><br />
 						<div>
-							<AlternativeProducts alternatives={categoryItem.alternatives} />
+							<AlternativeProducts alternatives={categoryItem.alternatives} categoryIndex={categoryIndex} />
 						</div>
 						<hr />
 					</div>
@@ -37,13 +37,12 @@ class CategoriesContainer extends Component {
 	}
 
     render() {
-		
 		const categoriesMarkup = this.getCategoryItems();
 
         return (
-				<div className="selected-product">
-					{ categoriesMarkup }
-				</div>
+			<div className="selected-product">
+				{ categoriesMarkup }
+			</div>
         );
 
     }
