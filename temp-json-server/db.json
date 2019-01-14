@@ -6,7 +6,7 @@
 		"categories": [
 			{
 				"name": "chairs",
-				"quantity": 2,
+				"quantity": 5,
 				"product": {
 					"id": "142434",
 					"productTitle": "Black Chair",
@@ -66,7 +66,7 @@
 					"depthText": "800 mm",
 					"heightText": "1400 mm",
 					"fullProductImageUrl": "http://static.viking-direct.co.uk/is/image/odeu13/3568401",
-					"price": 40.00
+					"price": 23.00
 				},
 				"alternatives": [{
 						"productTitle": "Test Desk 1"

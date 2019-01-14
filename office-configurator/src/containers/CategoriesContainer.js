@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SelectedProduct from './selectedProduct';
 import AlternativeProducts from './alternativeProducts';
+import ShoppingBasket from './shoppingBasket';
 import fetchPage from '../actions/fetchPage';
 
 class CategoriesContainer extends Component {
@@ -40,8 +41,13 @@ class CategoriesContainer extends Component {
 		const categoriesMarkup = this.getCategoryItems();
 
         return (
-			<div className="selected-product">
-				{ categoriesMarkup }
+			<div>
+				<div className="selected-product">
+					{ categoriesMarkup }
+				</div>
+				<div>
+					<ShoppingBasket />
+				</div>
 			</div>
         );
 
