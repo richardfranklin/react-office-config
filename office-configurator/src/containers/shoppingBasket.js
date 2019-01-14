@@ -6,33 +6,22 @@ class ShoppingBasket extends Component {
     renderBasketList(categories) {
         if (categories.length > 0) {
             return categories.map(category => {
-                const productQuantity = this.getQuantity(category.product);
-
                 return <li key={category.product.id}>
-                    {productQuantity}X {category.product.productTitle}&nbsp;-&nbsp;
-                    £{this.getCombinedPrice(category.product)}
+                    {category.quantity}X {category.product.productTitle}&nbsp;-&nbsp;
+                    £{this.getCombinedPrice(category)}
                 </li>
             });
         }
     }
 
     getCombinedPrice(category) {
-        return category.price * this.getQuantity(category);
-    }
-
-    getQuantity(category) {
-        if (category.hasOwnProperty('quantity')) {
-            return category.quantity;
-        }
-        else {
-            return this.props.numberOfEmployees;
-        }
+        return category.product.price * category.quantity;
     }
 
     getTotalPrice(categories) {
         if (categories.length > 0) {
             return categories.reduce((accumulator, currentCategory) => {
-                return (this.getCombinedPrice(currentCategory.product)) + accumulator;
+                return (this.getCombinedPrice(currentCategory)) + accumulator;
             }, 0)
         }
     }
