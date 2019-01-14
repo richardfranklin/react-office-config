@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import SelectedProduct from './SelectedProduct';
-import AlternativeProducts from './AlternativeProducts';
+import SelectedProduct from './selectedProduct';
+import AlternativeProducts from './alternativeProducts';
 import fetchPage from '../actions/fetchPage';
 
 class CategoriesContainer extends Component {
