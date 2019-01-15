@@ -1,0 +1,17 @@
+.main {
+    min-height: 600px;
+    width: 996px;
+    margin:0 auto;
+
+    &__header {
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e4e1dd;
+        margin-top: 20px;
+    }
+
+    &__header-right {
+        text-align: right;
+        padding-top: 50px;
+    }
+}

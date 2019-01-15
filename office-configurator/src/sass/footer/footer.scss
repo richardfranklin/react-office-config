@@ -1,0 +1,26 @@
+.main-footer {
+    & img {
+        margin-bottom: 0;
+    }
+
+    &__top {
+        background: #fff;
+        border-top: 1px dashed #e4e1dd;
+        border-bottom: 1px dashed #e4e1dd;
+    }
+
+    &__middle {
+        background: #f7f4f0;
+    }
+
+    &__bottom {
+        background: #fff;
+    }
+}
+
+.main-footer__top,
+.main-footer__middle,
+.main-footer__bottom {
+    text-align: center;
+    width: 100%;
+}

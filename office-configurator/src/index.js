@@ -8,7 +8,7 @@ import IntroContainer from './containers/IntroContainer';
 
 import reducers from './reducers';
 
-import './index.scss';
+import './sass/index.scss';
 import * as serviceWorker from './serviceWorker';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);

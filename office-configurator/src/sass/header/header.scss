@@ -1,0 +1,26 @@
+.main-header {
+    width:100%;
+
+    & img {
+        margin-bottom: 0;
+    }
+
+    &__top {
+        background: #757575;
+    }
+
+    &__middle {
+        background: #fff;
+    }
+
+    &__bottom {
+        background: #e4e1dd;
+    }
+}
+
+.main-header__top, 
+.main-header__middle, 
+.main-header__bottom {
+    width: 100%;
+    text-align: center;
+}
