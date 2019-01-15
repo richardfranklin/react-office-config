@@ -68,7 +68,13 @@
 }
 
 .selector__item {
+    display: block;
     border-right: 1px solid #e4e1dd;
+    cursor: pointer !important;
+}
+
+.selector__item p:last-child {
+    font-weight: bold;
 }
 
 .selector__item:last-child {
