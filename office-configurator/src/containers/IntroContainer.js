@@ -9,9 +9,9 @@ class IntroContainer extends Component {
 				<header className="main__header">
 					<div className="row">
 						<div className="col-8">
-							<h1>{this.props.name}</h1>
+							<h1>Lets start creating your {this.props.name}</h1>
 							<p>{this.props.description}</p>
-							<p>{this.props.numberOfEmployees}</p>
+							{/*<p>{this.props.numberOfEmployees}</p>*/}
 						</div>
 
 						<div className="col-4 main__header-right">
