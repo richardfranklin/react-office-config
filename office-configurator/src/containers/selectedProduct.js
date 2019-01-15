@@ -24,7 +24,7 @@ class SelectedProduct extends Component {
         if (prouctData !== undefined) {
             return (
                 <div key={prouctData.id} className="row selected-product">
-                    <div className="col-5">
+                    <div className="col-5 selected-product__image-block">
                         <img src={prouctData.fullProductImageUrl} alt={prouctData.productTitle} className="selected-product__image"/>
                     </div>
                     <div className="col-7">
@@ -36,8 +36,9 @@ class SelectedProduct extends Component {
                                 this.changeQuantity(this.props.selectedProductIndex, e.target.value)
                             }}/>
                         </div>
-                        <p>£{parseFloat(prouctData.price).toFixed(2)}</p>
-                        <p>£{parseFloat(prouctData.price * this.state.quantity).toFixed(2)}</p>
+
+                        <p className="selected-product__unit-price">Per unit: £{parseFloat(prouctData.price).toFixed(2)}</p>
+                        <p className="selected-product__total-price">£{parseFloat(prouctData.price * this.state.quantity).toFixed(2)}</p>
                     </div>
                 </div>
             )

@@ -1,9 +1,18 @@
 .selected-product {
+    padding-right: 20px;
+
+    &__image-block {
+        text-align: center;
+    }
+
     &__image {
-        max-width:100%;
+        max-width: 100%;
+        max-height: 270px;
     }
 
     &__qty {
+        margin-top: 20px;
+
         label, input {
             display: inline-block;
         }
@@ -11,5 +20,19 @@
         label {
             margin-right: 10px;
         }
+    }
+
+    &__unit-price {
+        margin: 20px 0 0;
+        font-size: 12px;
+        color: #808080;
+    }
+
+    &__total-price {
+        margin: 0;
+        font-size: 30px;
+        color: #e4002c;
+        font-weight: bold;
+        line-height: 30px;
     }
 }
