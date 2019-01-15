@@ -12,7 +12,6 @@ class SelectedProduct extends Component {
     }
 
     changeQuantity(categoryIndex, newQuantity) {
-        console.log(newQuantity);
         this.setState({ quantity: newQuantity }, () => {
             this.props.productQuantityChanged(categoryIndex, this.state.quantity);
         });

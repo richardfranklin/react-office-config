@@ -8,7 +8,7 @@ class ShoppingBasket extends Component {
             return categories.map(category => {
                 return <li key={category.product.id}>
                     {category.quantity}X {category.product.productTitle}&nbsp;-&nbsp;
-                    £{this.getCombinedPrice(category)}
+                    £{parseFloat(this.getCombinedPrice(category).toFixed(2))}
                 </li>
             });
         }
@@ -20,9 +20,9 @@ class ShoppingBasket extends Component {
 
     getTotalPrice(categories) {
         if (categories.length > 0) {
-            return categories.reduce((accumulator, currentCategory) => {
+            return parseFloat(categories.reduce((accumulator, currentCategory) => {
                 return (this.getCombinedPrice(currentCategory)) + accumulator;
-            }, 0)
+            }, 0).toFixed(2))
         }
     }
 
