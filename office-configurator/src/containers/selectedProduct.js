@@ -37,6 +37,7 @@ class SelectedProduct extends Component {
                             </input>
                         
                         <p>£{prouctData.price}</p>
+                        <p>£{parseFloat(prouctData.price * this.state.quantity).toFixed(2)}</p>
                     </div>
                 </div>
             )
