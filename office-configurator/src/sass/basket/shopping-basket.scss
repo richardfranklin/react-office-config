@@ -1,13 +1,91 @@
+$blue: #4290ee;
+
 .shopping-basket {
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: #4290ee;
-	padding: 20px;
+	background-color: $blue;
 	color: #ffffff;
 
+	&__title {
+		font-size: 2.4rem;
+		margin-bottom: .6rem;
+	}
+
+	&__description {
+		margin-bottom: 0;
+	}
+
 	&__list-container {
-		width: 100%;
+		width: 996px;
+		position: relative;
+		margin: 0 auto 20px;
+		padding-top: 20px;
+	}
+
+	&__list-inner-container {
+		max-height: 500px;
+		transition: max-height 0.5s ease-out;
+
+		&--is-closed {
+			max-height: 0;
+		}
+	}
+
+	&__list {
+		margin: 30px 0 30px;
+		padding: 0;
+		display: inline-block!important;
+		list-style: none;
+		width: 90%;
+
+		li {
+			font-size: 1.5rem;
+			padding-bottom: .5rem;
+		}		
+	}
+
+	&__list-price {
+		float: right;
+		font-weight: 700;
+		min-width: 100px;
+	}
+
+	&__total {
+		position: absolute;
+		right: 90px;
+		bottom: -40px;
+		padding-bottom: 40px;
+		font-size: 2rem;
+		font-weight: 700;
+		background-color: $blue;
+	}
+	
+	&__total-value {
+		font-size: 2.65rem;
+	}
+
+	&__expander {
+		width: 20px;
+		height: 20px;
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 8px;
+		transform: translateX(-10px);
+		font-size: 3rem;
+		line-height: 3rem;
+		text-align: center;
+		transition: all 0.4s;
+
+		&--is-open {
+			transform: rotate(180deg);
+		}
+
+		&:hover {
+			cursor: pointer;
+			top: 7px;
+		}
 	}
 }

@@ -25,7 +25,7 @@ class CategoriesContainer extends Component {
 							<SelectedProduct categoryData={categoryItem} selectedProductIndex={categoryIndex} />
 						</div>
 						<div className="col-4 alt-products">
-							<h3>Upgrade options</h3>
+							<h3>Alternative Products</h3>
 							<AlternativeProducts alternatives={categoryItem.alternatives} categoryIndex={categoryIndex} />
 						</div>
 					</div>
@@ -46,6 +46,14 @@ class CategoriesContainer extends Component {
 				</div>
 				<div>
 					<ShoppingBasket />
+				</div>
+				<div className="bottom-cta-container">
+				<button className="btn btn-primary ripple add-to-cart-btn" type="submit" id="addToBasketTop" title="Add to basket" data-add-to-cart="true">
+					<i className="add-to-cart-btn__icon fa fa-shopping-cart" aria-hidden="true"></i>
+					<span className="product-add-to-cart-panel__text">
+						Add to basket
+					</span>
+				</button>
 				</div>
 			</div>
         );

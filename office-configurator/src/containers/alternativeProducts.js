@@ -20,8 +20,8 @@ class AlternativeProducts extends Component {
 
                         <div className="col-9">
                             <h4 className="alt-products__title">{alternative.productTitle} </h4>
-                            <p className="alt-products__price">£{alternative.price} <span>per unit</span></p>
-                            <p className="alt-products__upgrade">Upgrade to this ></p>
+                            <p className="alt-products__price">£{parseFloat(alternative.price).toFixed(2)} <span>per unit</span></p>
+                            <p className="alt-products__upgrade">Select this product ></p>
                         </div>
                     </div>
                     
