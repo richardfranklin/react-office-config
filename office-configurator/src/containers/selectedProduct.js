@@ -34,6 +34,7 @@ class SelectedProduct extends Component {
                         <img src={prouctData.fullProductImageUrl} alt={prouctData.productTitle} className="selected-product__image"/>
                     </div>
                     <div className="col-7">
+                        <span class="selected-product__category-title">{categoryData.name}</span>
                         <h3>{prouctData.productTitle}</h3>
                         <p className="selected-product__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere enim ac arcu semper, a interdum sem ultrices. Sed vulputate interdum nulla ac fringilla. Etiam tincidunt ultricies sem sit amet tempor. Suspendisse potenti. Quisque et justo eros. In blandit iaculis libero non dapibus.</p>
                         <div className="selected-product__qty">

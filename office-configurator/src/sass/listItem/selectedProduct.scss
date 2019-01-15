@@ -25,6 +25,13 @@
             margin-right: 10px;
         }
     }
+    
+    &__category-title {
+        padding-bottom: 6px;
+        display: block;
+        text-transform: capitalize;
+        color: #808080;
+    }
 
     &__unit-price {
         margin: 20px 0 0;
