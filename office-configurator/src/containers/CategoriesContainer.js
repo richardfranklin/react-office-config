@@ -28,12 +28,12 @@ class CategoriesContainer extends Component {
 							<h3>Alternative Products</h3>
 							<AlternativeProducts alternatives={categoryItem.alternatives} categoryIndex={categoryIndex} />
 
-							<div class="alt-products__search input-group">
+							<div className="alt-products__search input-group">
 								<p className="alt-products__search-text">Find by Viking Number</p>
-								<input type="search" className="form-control alt-products__search-input" id="headerSearchInput" name="text" maxlength="100" aria-label="Search for item" autocomplete="off" />
-								<div class="input-group-append">
-									<button class="btn btn-primary ripple search-bar__submit" type="submit" id="headerSearchSubmit" title="Submit search">
-										<span class="sr-only">Submit search</span>
+								<input type="search" className="form-control alt-products__search-input" id="headerSearchInput" name="text" maxLength="100" aria-label="Search for item" autoComplete="off" />
+								<div className="input-group-append">
+									<button className="btn btn-primary ripple search-bar__submit" type="submit" id="headerSearchSubmit" title="Submit search">
+										<span className="sr-only">Submit search</span>
 									</button>
 								</div>
 							</div>
