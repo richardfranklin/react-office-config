@@ -20,15 +20,13 @@ class CategoriesContainer extends Component {
 		if (this.getCategories() !== null) {
 			return this.getCategories().map((categoryItem, categoryIndex) => {
 				return (
-					<div key={categoryItem.name}>
-						<div>
+					<div key={categoryItem.name} className="row list-items__product">
+						<div className="col-8">
 							<SelectedProduct categoryData={categoryItem} selectedProductIndex={categoryIndex} />
 						</div>
-						<br /><br />
-						<div>
+						<div className="col-4">
 							<AlternativeProducts alternatives={categoryItem.alternatives} categoryIndex={categoryIndex} />
 						</div>
-						<hr />
 					</div>
 				)
 			});
@@ -42,7 +40,7 @@ class CategoriesContainer extends Component {
 
         return (
 			<div>
-				<div className="selected-product">
+				<div className="list-items">
 					{ categoriesMarkup }
 				</div>
 				<div>

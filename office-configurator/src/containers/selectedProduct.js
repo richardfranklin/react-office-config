@@ -24,16 +24,21 @@ class SelectedProduct extends Component {
 
         if (prouctData !== undefined) {
             return (
-                <div key={prouctData.id}>
-                <img width="100" src={prouctData.fullProductImageUrl} alt={prouctData.productTitle} />
-                    <h3>{prouctData.productTitle}</h3>
-                    <span>
-                        Qty: <input type="number" value={this.state.quantity} onChange={e => {
-                            this.changeQuantity(this.props.selectedProductIndex, e.target.value)
-                        }}>
-                        </input>
-                    </span>
-                    <span>£{prouctData.price}</span>
+                <div key={prouctData.id} className="row selected-product">
+                    <div className="col-5">
+                        <img src={prouctData.fullProductImageUrl} alt={prouctData.productTitle} className="selected-product__image"/>
+                    </div>
+                    <div className="col-7">
+                        <h3>{prouctData.productTitle}</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere enim ac arcu semper, a interdum sem ultrices. Sed vulputate interdum nulla ac fringilla. Etiam tincidunt ultricies sem sit amet tempor. Suspendisse potenti. Quisque et justo eros. In blandit iaculis libero non dapibus.</p>
+                        <label>Qty: </label>
+                            <input type="number" value={this.state.quantity} onChange={e => {
+                                this.changeQuantity(this.props.selectedProductIndex, e.target.value)
+                            }}>
+                            </input>
+                        
+                        <p>£{prouctData.price}</p>
+                    </div>
                 </div>
             )
         }
