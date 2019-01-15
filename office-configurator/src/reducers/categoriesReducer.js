@@ -2,9 +2,18 @@ import { FETCH_PAGE } from '../actions/fetchPage';
 
 export default function (state = {}, action, root) {
     if (action.type === FETCH_PAGE) {
+
         if (action.payload.data && action.payload.data.hasOwnProperty('categories')) {
             return action.payload.data.categories;
         } 
+        else if (action.payload.hasOwnProperty('newQuantity') ) {
+            const rootCategories = [ ...root.categories ];
+            const categoryIndex = action.payload.categoryIndex;
+            const newQuantity = action.payload.newQuantity;
+
+            rootCategories[categoryIndex].quantity = newQuantity;
+            return rootCategories;
+        }
         else {
             const rootCategories = [ ...root.categories ];
             const categoryIndex = action.payload.categoryIndex;

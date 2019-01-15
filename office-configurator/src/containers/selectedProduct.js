@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import productQuantityChanged from '../actions/productQuantityChanged';
 class SelectedProduct extends Component {
-    changeNumber() {
-        console.log('Changed');
+
+    changeNumber(categoryIndex, newQuantity) {
+        this.props.productQuantityChanged(categoryIndex, newQuantity);
     }
 
     render() {
-        if (this.props.productData !== undefined) {
+        const categoryData = this.props.categoryData;
+        const prouctData = categoryData.product;
+        console.log(categoryData);
+
+        if (prouctData !== undefined) {
             return (
-                <div key={this.props.productData.id}>
-                <img width="100" src={this.props.productData.fullProductImageUrl} alt={this.props.productData.productTitle} />
-                    <h3>{this.props.productData.productTitle}</h3>
-                    <span>Qty: <input type="number" value={this.props.numberOfEmployees} onChange={() => {this.changeNumber()}}></input></span>
-                    <span>£{this.props.productData.price}</span>
+                <div key={prouctData.id}>
+                <img width="100" src={prouctData.fullProductImageUrl} alt={prouctData.productTitle} />
+                    <h3>{prouctData.productTitle}</h3>
+                    <span>Qty: <input type="number" value={categoryData.quantity} onChange={() => {this.changeNumber(this.props.selectedProductIndex, 11)}}></input></span>
+                    <span>£{prouctData.price}</span>
                 </div>
             )
         }
@@ -24,10 +29,11 @@ class SelectedProduct extends Component {
     }
 }
 
-function mapStateToProps({ numberOfEmployees }) {
+function mapStateToProps({ categories, numberOfEmployees }) {
     return {
+        categories,
         numberOfEmployees
     };
 }
 
-export default connect(mapStateToProps)(SelectedProduct);
+export default connect(mapStateToProps, { productQuantityChanged })(SelectedProduct);

@@ -22,7 +22,7 @@ class CategoriesContainer extends Component {
 				return (
 					<div key={categoryItem.name}>
 						<div>
-							<SelectedProduct productData={categoryItem.product} />
+							<SelectedProduct categoryData={categoryItem} selectedProductIndex={categoryIndex} />
 						</div>
 						<br /><br />
 						<div>
