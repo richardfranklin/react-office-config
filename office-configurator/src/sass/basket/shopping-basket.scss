@@ -72,6 +72,7 @@ $blue: #4290ee;
 		height: 20px;
 		display: block;
 		position: absolute;
+		color: #ffffff;
 		left: 50%;
 		top: 8px;
 		transform: translateX(-10px);
@@ -79,6 +80,16 @@ $blue: #4290ee;
 		line-height: 3rem;
 		text-align: center;
 		transition: all 0.4s;
+
+		i {
+			color: #ffffff;
+			font-size: 1.9rem;
+			display: block;
+		}
+
+		&:hover i {
+			color: #ffffff;
+		}
 
 		&--is-open {
 			transform: rotate(180deg);

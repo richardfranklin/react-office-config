@@ -51,7 +51,9 @@ class ShoppingBasket extends Component {
             return (
                 <div className="shopping-basket">
                     <div className="shopping-basket__list-container">
-                        <span className={"shopping-basket__expander" + expanderButtonClass} onClick={() => this.expandClick()}>^</span>
+                        <span className={"shopping-basket__expander" + expanderButtonClass} onClick={() => this.expandClick()}>
+                            <i className="selected-product__remove fas fa-chevron-up" aria-hidden="true"></i>
+                        </span>
                         <h4 className="shopping-basket__title">{profileType} build package overview</h4>
                         <p className="shopping-basket__description">Below is a summary of all products in your current package:</p>
                         <div className={"shopping-basket__list-inner-container" + expanderClass}>

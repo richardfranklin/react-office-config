@@ -17,9 +17,14 @@ class SelectedProduct extends Component {
         });
     }
 
+    removeQuantity() {
+        this.setState({ quantity: 0 });
+    }
+
     render() {
         const categoryData = this.props.categoryData;
         const prouctData = categoryData.product;
+        const priceClass = this.state.quantity === 0 ? ' selected-product__total-price--removed' : '';
 
         if (prouctData !== undefined) {
             return (
@@ -35,11 +40,11 @@ class SelectedProduct extends Component {
                             <input type="number" className="form-control input-width--xsmall product-add-to-cart-panel__input" value={this.state.quantity} onChange={e => {
                                 this.changeQuantity(this.props.selectedProductIndex, e.target.value)
                             }}/>
-                            <i className="selected-product__remove far fa-trash-alt" aria-hidden="true"></i>
+                            <i className="selected-product__remove far fa-trash-alt" aria-hidden="true" onClick={() => { this.removeQuantity() }}></i>
                         </div>
 
                         <p className="selected-product__unit-price">£{parseFloat(prouctData.price).toFixed(2)} per unit</p>
-                        <p className="selected-product__total-price">£{parseFloat(prouctData.price * this.state.quantity).toFixed(2)}</p>
+                        <p className={'selected-product__total-price' + priceClass}>£{parseFloat(prouctData.price * this.state.quantity).toFixed(2)}</p>
                     </div>
                 </div>
             )
