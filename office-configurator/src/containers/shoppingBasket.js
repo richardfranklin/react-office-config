@@ -16,7 +16,7 @@ class ShoppingBasket extends Component {
             return categories.map(category => {
                 return <li key={category.product.id}>
                     <strong>{category.quantity}X</strong> {category.product.productTitle}&nbsp;-&nbsp;
-                    <span class="shopping-basket__list-price">£{parseFloat(this.getCombinedPrice(category)).toFixed(2)}</span>
+                    <span className="shopping-basket__list-price">£{parseFloat(this.getCombinedPrice(category)).toFixed(2)}</span>
                 </li>
             });
         }
@@ -59,8 +59,8 @@ class ShoppingBasket extends Component {
                                 { this.renderBasketList(this.props.categories) }
                             </ul>
 
-                            <button class="btn btn-secondary ripple add-to-cart-btn" type="submit" id="addToBasketTop" title="Add to basket" data-add-to-cart="true">
-                                <i class="add-to-cart-btn__icon fa fa-shopping-cart" aria-hidden="true"></i><span class="product-add-to-cart-panel__text">
+                            <button className="btn btn-secondary ripple add-to-cart-btn" type="submit" id="addToBasketTop" title="Add to basket" data-add-to-cart="true">
+                                <i className="add-to-cart-btn__icon fa fa-shopping-cart" aria-hidden="true"></i><span className="product-add-to-cart-panel__text">
                                     Add to basket
                                 </span>
                             </button>
