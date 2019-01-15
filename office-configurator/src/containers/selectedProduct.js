@@ -29,7 +29,7 @@ class SelectedProduct extends Component {
                     </div>
                     <div className="col-7">
                         <h3>{prouctData.productTitle}</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere enim ac arcu semper, a interdum sem ultrices. Sed vulputate interdum nulla ac fringilla. Etiam tincidunt ultricies sem sit amet tempor. Suspendisse potenti. Quisque et justo eros. In blandit iaculis libero non dapibus.</p>
+                        <p className="selected-product__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere enim ac arcu semper, a interdum sem ultrices. Sed vulputate interdum nulla ac fringilla. Etiam tincidunt ultricies sem sit amet tempor. Suspendisse potenti. Quisque et justo eros. In blandit iaculis libero non dapibus.</p>
                         <div className="selected-product__qty">
                             <label>Qty: </label>
                             <input type="number" className="form-control input-width--xsmall product-add-to-cart-panel__input" value={this.state.quantity} onChange={e => {

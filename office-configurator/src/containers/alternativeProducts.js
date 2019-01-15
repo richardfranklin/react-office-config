@@ -14,8 +14,8 @@ class AlternativeProducts extends Component {
             return (
                 <li key={alternative.productTitle} onClick={() => {this.alternativeClicked(alternative, index)}} className="alt-products__item">
                     <div className="row">
-                        <div className="col-3">
-                            <img src={alternative.fullProductImageUrl} alt={alternative.productTitle} />
+                        <div className="col-3 alt-products__image-block">
+                            <img src={alternative.fullProductImageUrl} alt={alternative.productTitle} className="alt-products__image" />
                         </div>
 
                         <div className="col-9">
