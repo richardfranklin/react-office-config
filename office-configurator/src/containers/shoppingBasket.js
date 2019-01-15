@@ -69,7 +69,7 @@ class ShoppingBasket extends Component {
 
                         </div>
                         <span className="shopping-basket__total">
-                            Total: <span className="shopping-basket__total-value">£{this.getTotalPrice(this.props.categories)}</span>
+                            Total: <span className="shopping-basket__total-value">£{parseFloat(this.getTotalPrice(this.props.categories)).toFixed(2)}</span>
                         </span>
                     </div>
                 </div>
