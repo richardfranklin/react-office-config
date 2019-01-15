@@ -35,6 +35,7 @@ class SelectedProduct extends Component {
                             <input type="number" className="form-control input-width--xsmall product-add-to-cart-panel__input" value={this.state.quantity} onChange={e => {
                                 this.changeQuantity(this.props.selectedProductIndex, e.target.value)
                             }}/>
+                            <i className="selected-product__remove far fa-trash-alt" aria-hidden="true"></i>
                         </div>
 
                         <p className="selected-product__unit-price">Per unit: £{parseFloat(prouctData.price).toFixed(2)}</p>
