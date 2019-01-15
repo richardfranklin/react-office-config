@@ -38,7 +38,7 @@ class SelectedProduct extends Component {
                             <i className="selected-product__remove far fa-trash-alt" aria-hidden="true"></i>
                         </div>
 
-                        <p className="selected-product__unit-price">Per unit: £{parseFloat(prouctData.price).toFixed(2)}</p>
+                        <p className="selected-product__unit-price">£{parseFloat(prouctData.price).toFixed(2)} per unit</p>
                         <p className="selected-product__total-price">£{parseFloat(prouctData.price * this.state.quantity).toFixed(2)}</p>
                     </div>
                 </div>

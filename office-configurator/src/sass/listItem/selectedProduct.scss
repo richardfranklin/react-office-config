@@ -38,6 +38,10 @@
         color: #e4002c;
         font-weight: bold;
         line-height: 30px;
+
+        &--removed {
+            color: #808080;
+        }
     }
 
     &__remove {
