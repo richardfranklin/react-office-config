@@ -12,6 +12,7 @@ class SelectedProduct extends Component {
     }
 
     changeQuantity(categoryIndex, newQuantity) {
+        console.log(newQuantity);
         this.setState({ quantity: newQuantity }, () => {
             this.props.productQuantityChanged(categoryIndex, this.state.quantity);
         });
@@ -26,7 +27,12 @@ class SelectedProduct extends Component {
                 <div key={prouctData.id}>
                 <img width="100" src={prouctData.fullProductImageUrl} alt={prouctData.productTitle} />
                     <h3>{prouctData.productTitle}</h3>
-                    <span>Qty: <input type="number" value={this.state.quantity} onChange={() => {this.changeQuantity(this.props.selectedProductIndex, 11)}}></input></span>
+                    <span>
+                        Qty: <input type="number" value={this.state.quantity} onChange={e => {
+                            this.changeQuantity(this.props.selectedProductIndex, e.target.value)
+                        }}>
+                        </input>
+                    </span>
                     <span>£{prouctData.price}</span>
                 </div>
             )
