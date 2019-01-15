@@ -11,11 +11,20 @@ class AlternativeProducts extends Component {
     loopAlternatives(alternatives) {
         return alternatives.map((alternative, index) => {
             return (
-                <div className="alt-products">
-                    <li key={alternative.productTitle} onClick={() => {this.alternativeClicked(alternative, index)}}>
-                        {alternative.productTitle} - £{alternative.price}
-                    </li>
-                </div>
+                <li key={alternative.productTitle} onClick={() => {this.alternativeClicked(alternative, index)}} className="alt-products__item">
+                    <div className="row">
+                        <div className="col-3">
+
+                        </div>
+
+                        <div className="col-9">
+                            <h4 className="alt-products__title">{alternative.productTitle} </h4>
+                            <p className="alt-products__price">£{alternative.price} <span>per unit</span></p>
+                            <p className="alt-products__upgrade">Upgrade to this ></p>
+                        </div>
+                    </div>
+                    
+                </li>
             )
         });
     }

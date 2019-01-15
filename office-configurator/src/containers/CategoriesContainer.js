@@ -24,7 +24,8 @@ class CategoriesContainer extends Component {
 						<div className="col-8">
 							<SelectedProduct categoryData={categoryItem} selectedProductIndex={categoryIndex} />
 						</div>
-						<div className="col-4">
+						<div className="col-4 alt-products">
+							<h3>Upgrade options</h3>
 							<AlternativeProducts alternatives={categoryItem.alternatives} categoryIndex={categoryIndex} />
 						</div>
 					</div>
