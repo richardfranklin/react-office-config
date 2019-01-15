@@ -24,7 +24,6 @@ class AlternativeProducts extends Component {
                             <p className="alt-products__upgrade">Select this product ></p>
                         </div>
                     </div>
-                    
                 </li>
             )
         });
