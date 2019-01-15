@@ -1,10 +1,13 @@
 import axios from 'axios';
 
 export const FETCH_PAGE = 'fetch_page';
-const ROOT_URL = 'http://10.133.92.13:8080/search/office/popular';
 
-export default function fetchPage() {
-    const request = axios.get(ROOT_URL);
+
+export default function fetchPage(noOfEmployees, profile) {
+    const currentNoOfEmployees = `${noOfEmployees}` || '';
+    const currentProfile = `${profile}/` || '';
+
+    const request = axios.get(`http://10.133.92.13:8080/search/${currentProfile}popular?numberOfEmployees=${currentNoOfEmployees}`);
 
 	return {
         type: FETCH_PAGE,

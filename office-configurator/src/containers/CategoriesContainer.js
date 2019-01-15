@@ -8,9 +8,21 @@ import fetchPage from '../actions/fetchPage';
 class CategoriesContainer extends Component {
 	
 	componentWillMount() {
-        this.props.fetchPage();
+		var urlParams = new URLSearchParams(window.location.search);
+		const noOfEmployees = urlParams.get('numberOfEmployees');
+		const profile = urlParams.get('profile');
+		
+        this.props.fetchPage(noOfEmployees, profile);
 	}
 	
+	getUrlParams(search) {
+		let hashes = search.slice(search.indexOf('?') + 1).split('&')
+		return hashes.reduce((params, hash) => {
+			let [key, val] = hash.split('=')
+			return Object.assign(params, {[key]: decodeURIComponent(val)})
+		}, {})
+	  }
+
 	getCategories() {
 		if (this.props.categories.length > 0) return this.props.categories;
 		return null;
