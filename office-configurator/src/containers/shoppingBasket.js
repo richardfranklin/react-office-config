@@ -27,13 +27,20 @@ class ShoppingBasket extends Component {
     }
 
     render() {
+
         if (this.props.categories !== undefined) {
             return (
-                <div>
-                    <ul>
-                        { this.renderBasketList(this.props.categories) }
-                    </ul>
-                    <p>Total: £{this.getTotalPrice(this.props.categories)}</p>
+                <div className="shopping-basket">
+                    <div className="container">
+                        <div className="row">
+                            <div className="shopping-basket__list-container">
+                                <ul className="shopping-basket__list">
+                                    { this.renderBasketList(this.props.categories) }
+                                </ul>
+                                <p>Total: £{this.getTotalPrice(this.props.categories)}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             )
         }
@@ -44,8 +51,9 @@ class ShoppingBasket extends Component {
     }
 }
 
-function mapStateToProps({ categories, numberOfEmployees }) {
+function mapStateToProps({ name, categories, numberOfEmployees }) {
     return {
+        name,
         categories,
         numberOfEmployees
     };
